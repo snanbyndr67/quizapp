@@ -1,0 +1,73 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-6 offset-md-3">
+                <div class="container text-center">
+                    <img src="../../../assets/logo.png" width="150px" alt="logo">
+                </div>
+                <h1 class="text-center">Kayıt ol</h1>
+
+                <!-- {{ user | json}} -->
+                <form (ngSubmit)="formSubmit()">
+                              <!-- Kullanıcı Adı -->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Kullanıcı adı</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="user.username"
+                        name="username"
+                        matInput placeholder="Kullanıcı adı giriniz">
+                      </mat-form-field>
+
+                               <!-- Şifre -->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Şifre</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="user.password"
+                        name="password"
+                        type="password" matInput placeholder="Şifre giriniz">
+                      </mat-form-field>
+
+                               <!-- Ad -->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Ad</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="user.firstName"
+                        name="firstName"
+                        matInput placeholder="Ad giriniz">
+                      </mat-form-field>
+
+                               <!-- Soyad -->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Soyad</mat-label>
+                        <input 
+                        required
+                        [(ngModel)]="user.lastName"
+                        name="lastName"
+                        matInput placeholder="Soyad giriniz">
+                      </mat-form-field>
+
+                               <!-- Eposta -->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Eposta</mat-label>
+                        <input 
+                        required
+
+                        [(ngModel)]="user.email"
+                        name="email"
+                        type="email" matInput placeholder="Eposta giriniz">
+                      </mat-form-field>
+
+                      <div class="container text-center">
+                        <button mat-flat-button color="warn">Temizle</button>
+                        <button type="submit" style="margin-left: 50px;" mat-flat-button color="primary">Kayıt ol</button>
+                    </div>
+                      
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
