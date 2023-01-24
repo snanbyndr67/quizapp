@@ -6,6 +6,7 @@ import com.quizapp.multiplechoice.repo.RoleRepository;
 import com.quizapp.multiplechoice.repo.UserRepository;
 import com.quizapp.multiplechoice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -47,5 +48,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUser(String username) {
         return this.userRepository.findByUsername(username);
+    }
+
+    @Override
+    public void deleteUser(Long userId) {
+        this.userRepository.deleteById(userId);
     }
 }

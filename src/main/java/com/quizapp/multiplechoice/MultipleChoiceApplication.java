@@ -27,28 +27,5 @@ public class MultipleChoiceApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		System.out.println("Başlangıç kodu");
-//
-//		User user = new User();
-//
-//		user.setFirstName("Sinan");
-//		user.setLastName("Bayındır");
-//		user.setUsername("snanbyndr");
-//		user.setEmail("snan_67@msn.com");
-//		user.setPassword("root");
-//		user.setProfile("profil.png");
-//
-//		Role role1=new Role();
-//		role1.setRoleId(44L);
-//		role1.setRoleName("ADMIN");
-//
-//		Set<UserRole> userRoleSet=new HashSet<>();
-//		UserRole userRole = new UserRole();
-//		userRole.setRole(role1);
-//		userRole.setUser(user);
-//
-//		userRoleSet.add(userRole);
-//
-//		User user1 = this.userService.createUser(user, userRoleSet);
-//		System.out.println(user1.getUsername());
 	}
 }

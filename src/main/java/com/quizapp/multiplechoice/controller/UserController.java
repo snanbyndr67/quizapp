@@ -13,6 +13,7 @@ import java.util.Set;
 
 @RestController
 @RequestMapping("/user")
+@CrossOrigin("*")
 public class UserController {
 
     @Autowired
@@ -43,4 +44,12 @@ public class UserController {
         return this.userService.getUser(username);
     }
 
+    //Kullanıcıyı kimliğe göre silme
+    @DeleteMapping("/{userId}")
+    public void deleteUser(@PathVariable("userId") Long userId) {
+        this.userService.deleteUser(userId);
+    }
+
+
+    //Api'yi güncelleme
 }

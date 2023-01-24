@@ -12,4 +12,7 @@ public interface UserService {
 
     //Kullanıcı adına göre alma
     public User getUser(String username);
+
+    // Kimliğe göre kullanıcı silme
+    public void deleteUser(Long userId);
 }
